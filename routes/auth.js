@@ -35,7 +35,7 @@ router.post('/login', async (req, res) => {
     !validPassword && res.status(400).json('wrong password');
     res.status(200).json(user);
   } catch (error) {
-    console.log(error);
+    res.status(500).json(error);
   }
 });
 
